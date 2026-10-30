@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bvfaju3udlyto"]
+
+[ext_resource type="Script" uid="uid://b5ysuncjrt8lb" path="res://addons/dialogue_editor/nodes/RandomizeNode.cs" id="1_fhdtq"]
+
+[node name="randomize_531237822" type="GraphNode" unique_id=1004435678]
+offset_right = 190.0
+offset_bottom = 98.0
+theme_override_constants/separation = 4
+title = "Randomize Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = true
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = true
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color(1, 1, 1, 1)
+slot/4/left_icon = null
+slot/4/right_enabled = true
+slot/4/right_type = 0
+slot/4/right_color = Color(1, 1, 1, 1)
+slot/4/right_icon = null
+slot/4/draw_stylebox = true
+script = ExtResource("1_fhdtq")
+
+[node name="Control" type="Label" parent="." unique_id=708582131]
+layout_mode = 2
+text = "Input"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1258548585]
+layout_mode = 2
+
+[node name="Control2" type="Label" parent="." unique_id=1819106185]
+layout_mode = 2
+text = "Output 1"
+
+[node name="Control3" type="Label" parent="." unique_id=1392437656]
+layout_mode = 2
+text = "Output 2"
+
+[node name="Control4" type="Label" parent="." unique_id=1738956985]
+layout_mode = 2
+text = "Output 3"

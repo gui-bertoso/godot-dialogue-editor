@@ -1,0 +1,17 @@
+[start]
+type=start
+position=40,80
+next=welcome
+
+[welcome]
+type=dialogue
+position=320,80
+text=Hello, traveller. There are ducks by the river.
+option_0_text=See the ducks
+option_0_next=end
+option_1_text=Keep walking
+option_1_next=end
+
+[end]
+type=end
+position=680,80

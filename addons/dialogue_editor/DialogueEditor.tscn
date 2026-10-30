@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://n4bx04gdodl5"]
+
+[ext_resource type="Script" uid="uid://b8280siggftxp" path="res://addons/dialogue_editor/DialogueEditor.cs" id="1_dialogue_editor_script"]
+
+[node name="DialogueEditor" type="Control" unique_id=1834357493]
+custom_minimum_size = Vector2(0, 320)
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_dialogue_editor_script")
+
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=2118762461]
+item_count = 7
+item_0/text = "add dialogue node"
+item_0/id = 0
+item_1/text = "add switch node"
+item_1/id = 1
+item_2/text = "add randomize node"
+item_2/id = 6
+item_3/id = -1
+item_3/separator = true
+item_4/text = "add start node"
+item_4/id = 2
+item_5/id = -1
+item_5/separator = true
+item_6/text = "add end node"
+item_6/id = 5
+
+[node name="Root" type="VBoxContainer" parent="." unique_id=190243615]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Toolbar" type="PanelContainer" parent="Root" unique_id=140243111]
+layout_mode = 2
+
+[node name="ToolbarMargin" type="MarginContainer" parent="Root/Toolbar" unique_id=194552121]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="ToolbarContent" type="VBoxContainer" parent="Root/Toolbar/ToolbarMargin" unique_id=184948122]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TopRow" type="HBoxContainer" parent="Root/Toolbar/ToolbarMargin/ToolbarContent" unique_id=137736210]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="FileMenuButton" type="MenuButton" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/TopRow" unique_id=193331600]
+unique_name_in_owner = true
+layout_mode = 2
+text = "File"
+item_count = 5
+popup/item_0/text = "New Graph"
+popup/item_0/id = 100
+popup/item_1/id = -1
+popup/item_1/separator = true
+popup/item_2/text = "Open .dalge..."
+popup/item_2/id = 101
+popup/item_3/text = "Save"
+popup/item_3/id = 102
+popup/item_4/text = "Save As..."
+popup/item_4/id = 103
+
+[node name="PathLabel" type="Label" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/TopRow" unique_id=175886703]
+layout_mode = 2
+text = ".dalge"
+
+[node name="FilePathEdit" type="LineEdit" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/TopRow" unique_id=890615592]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "res://addons/dialogue_editor/output/dialogue_preview.dalge"
+placeholder_text = "res://dialogues/example.dalge"
+
+[node name="BrowseLoadButton" type="Button" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/TopRow" unique_id=113468820]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Open..."
+
+[node name="BrowseSaveButton" type="Button" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/TopRow" unique_id=890906183]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save As..."
+
+[node name="BottomRow" type="HBoxContainer" parent="Root/Toolbar/ToolbarMargin/ToolbarContent" unique_id=163289744]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RefreshPreviewButton" type="Button" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/BottomRow" unique_id=1312990980]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Refresh"
+
+[node name="LoadDatButton" type="Button" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/BottomRow" unique_id=518273245]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load Current"
+
+[node name="SaveDatButton" type="Button" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/BottomRow" unique_id=1321367193]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save Current"
+
+[node name="ToolbarSpacer" type="Control" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/BottomRow" unique_id=382238194]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatusInline" type="Label" parent="Root/Toolbar/ToolbarMargin/ToolbarContent/BottomRow" unique_id=570040805]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ready."
+horizontal_alignment = 2
+
+[node name="MainSplit" type="HSplitContainer" parent="Root" unique_id=188209011]
+layout_mode = 2
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(980)
+split_offset = 980
+
+[node name="LeftPanel" type="PanelContainer" parent="Root/MainSplit" unique_id=934923853]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LeftMargin" type="MarginContainer" parent="Root/MainSplit/LeftPanel" unique_id=122429010]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="GraphEdit" type="GraphEdit" parent="Root/MainSplit/LeftPanel/LeftMargin" unique_id=1609876634]
+unique_name_in_owner = true
+layout_mode = 2
+grid_pattern = 1
+
+[node name="RightPanel" type="PanelContainer" parent="Root/MainSplit" unique_id=1415787084]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+
+[node name="RightMargin" type="MarginContainer" parent="Root/MainSplit/RightPanel" unique_id=177493330]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="RightVBox" type="VBoxContainer" parent="Root/MainSplit/RightPanel/RightMargin" unique_id=124214701]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PreviewHeader" type="Label" parent="Root/MainSplit/RightPanel/RightMargin/RightVBox" unique_id=628786510]
+layout_mode = 2
+text = "Preview"
+
+[node name="PreviewText" type="CodeEdit" parent="Root/MainSplit/RightPanel/RightMargin/RightVBox" unique_id=711269676]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+text = "[start]
+position=200,200
+type=start
+next=
+
+[end]
+position=900,200
+type=end"
+
+[node name="StatusBar" type="PanelContainer" parent="Root" unique_id=167430018]
+layout_mode = 2
+
+[node name="StatusMargin" type="MarginContainer" parent="Root/StatusBar" unique_id=295842100]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="StatusLabel" type="Label" parent="Root/StatusBar/StatusMargin" unique_id=145721987]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Preview atualizado: dialogue_preview.dalge"
+
+[node name="OpenFileDialog" type="FileDialog" parent="." unique_id=151168480]
+unique_name_in_owner = true
+title = "Open Dialogue File"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.dalge ; Dialogue Files")
+
+[node name="SaveFileDialog" type="FileDialog" parent="." unique_id=145337902]
+unique_name_in_owner = true
+title = "Save Dialogue File"
+access = 2
+filters = PackedStringArray("*.dalge ; Dialogue Files")

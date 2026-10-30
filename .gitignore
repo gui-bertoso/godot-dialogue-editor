@@ -1,0 +1,7 @@
+.godot/
+.godot-test/
+bin/
+obj/
+*.tmp
+.idea/
+.vs/

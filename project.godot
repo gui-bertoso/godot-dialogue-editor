@@ -1,0 +1,14 @@
+config_version=5
+
+[application]
+config/name="Dialogue Editor Example"
+config/features=PackedStringArray("4.8", "C#", "GL Compatibility")
+
+[dotnet]
+project/assembly_name="DialogueEditorExample"
+
+[editor_plugins]
+enabled=PackedStringArray("res://addons/dialogue_editor/plugin.cfg")
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://w0gsdv20x12v"]
+
+[ext_resource type="Script" path="res://addons/dialogue_editor/nodes/SwitchNode.cs" id="1"]
+
+[node name="Choices" type="GraphNode"]
+title = "Choices"
+theme_override_constants/separation = 6
+script = ExtResource("1")
+
+[node name="Input" type="Label" parent="."]
+layout_mode = 2
+text = "Choose a response"
+
+[node name="Option1" type="LineEdit" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 34)
+layout_mode = 2
+placeholder_text = "Response 1"
+
+[node name="Option2" type="LineEdit" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 34)
+layout_mode = 2
+placeholder_text = "Response 2"
+
+[node name="Option3" type="LineEdit" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 34)
+layout_mode = 2
+placeholder_text = "Response 3"
