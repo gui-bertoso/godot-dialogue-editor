@@ -1,6 +1,6 @@
 # Godot Dialogue Editor
 
-A visual dialogue editor for Godot .NET, written in C#. Created by [Guilherme Bertoso](https://github.com/gui-bertoso) for [Project Horizons](https://github.com/gui-bertoso/project-horizons-csharp), now available as a standalone addon. Extracted from [commit `64d0d33`](https://github.com/gui-bertoso/project-horizons-csharp/tree/64d0d339f4ec3e11bba3abdcfa0b9c8154151473/addons/dialogue_editor).
+A visual dialogue editor for Godot .NET, written in C#. Created by [Guilherme Bertoso](https://github.com/gui-bertoso), extracted from a personal project and made available as a standalone addon.
 
 Build branching conversations with Start, Dialogue, Choices, Random and End nodes. Connect ports, edit responses, validate the graph and save it as a readable `.dalge` file. The editor lives in Godot's bottom panel and follows the editor theme.
 
@@ -15,7 +15,7 @@ Godot **.NET** is required; the standard Godot download cannot run C# plugins. T
 3. Enable **Dialogue Editor** under **Project → Project Settings → Plugins**.
 4. Open **Dialogue Editor** in the bottom panel.
 
-The addon includes its `.dalge` parser. No game scripts, fonts or external packages are needed beyond Godot's C# SDK. If you already have a `DalgeParser` or `DalgeData` class from Horizons, remove the duplicate definitions before installing this copy.
+The addon includes its `.dalge` parser. No game scripts, fonts or external packages are needed beyond Godot's C# SDK. If you already have a `DalgeParser` or `DalgeData` class in your project, remove the duplicate definitions before installing this copy.
 
 ## Try the example
 
@@ -49,7 +49,7 @@ position=680,80
 
 `DalgeParser.Load("res://dialogues/example.dalge")` returns a dictionary of `DalgeData` nodes. Follow `NextByPort` in your own dialogue runner; response labels are in `OptionTextByIndex`. Text supports escaped newlines (`\n`) and backslashes (`\\`).
 
-This addon edits dialogue data. The Horizons player controller, NPC interaction and dialogue playback UI are separate game code and are not included. For exported games, include `*.dalge` in Godot's non-resource export filter.
+This addon edits dialogue data. Player controllers, NPC interaction and dialogue playback UI belong to the host game and are not included. For exported games, include `*.dalge` in Godot's non-resource export filter.
 
 ## Development
 
@@ -63,4 +63,4 @@ Replace `godot` with your Godot .NET executable. The first Godot command opens a
 
 ## License
 
-[MIT](LICENSE). The addon was extracted from Project Horizons; that project's existing copy remains in place.
+[MIT](LICENSE). Created as part of a personal project and released separately as a reusable addon.
