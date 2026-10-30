@@ -1,6 +1,6 @@
 # Godot Dialogue Editor
 
-A visual dialogue editor for Godot .NET, written in C#. Created by [Guilherme Bertoso](https://github.com/gui-bertoso), extracted from Project Horizons, a personal project, and made available as a standalone addon.
+A visual dialogue editor for Godot .NET, written in C#. Created by [Guilherme Bertoso](https://github.com/gui-bertoso), extracted from a private version of Project Horizons and made available as a standalone addon.
 
 Build branching conversations with Start, Dialogue, Choices, Random and End nodes. Connect ports, edit responses, validate the graph and save it as a readable `.dalge` file. The editor lives in Godot's bottom panel and follows the editor theme.
 
@@ -63,4 +63,4 @@ Replace `godot` with your Godot .NET executable. The first Godot command opens a
 
 ## License
 
-[MIT](LICENSE). Created as part of Project Horizons, a personal project, and released separately as a reusable addon.
+[MIT](LICENSE). Extracted from a private version of Project Horizons and released separately as a reusable addon.
