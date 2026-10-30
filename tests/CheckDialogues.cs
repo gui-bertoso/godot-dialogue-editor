@@ -101,6 +101,9 @@ public partial class CheckDialogues : Control
 			foreach (var dialog in editor.GetChildren().OfType<ConfirmationDialog>()) dialog.Hide();
 			editor.LoadDat(path); await Settle(); await Settle();
 			Require(editor.ValidateGraph().Count == 0, "Complete test graph should validate");
+			editor.LoadDat("res://addons/dialogue_editor/output/dialogue_preview.dalge");
+			await Settle(); await Settle();
+			Require(editor.ValidateGraph().Count == 0, "Bundled example should load and validate");
 			GD.Print("DIALOGUE EDITOR CHECK PASSED: graph round trip, indexed ports, unicode, malformed input and save protection");
 			GetTree().Quit();
 		}

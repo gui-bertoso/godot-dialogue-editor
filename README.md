@@ -55,11 +55,11 @@ This addon edits dialogue data. The Horizons player controller, NPC interaction 
 
 ```sh
 dotnet build
-godot --headless --editor --path . --script res://tests/check_plugin.gd
+godot --headless --editor --path . --quit-after 60
 godot --headless --path . res://tests/check_dialogues.tscn
 ```
 
-Replace `godot` with your Godot .NET executable. The checks cover plugin loading, graph round trips, choice/random port indices, Unicode escaping, malformed input and failed-save protection. They write temporary files under `/tmp` and do not alter the example dialogue.
+Replace `godot` with your Godot .NET executable. The first Godot command opens and closes the editor with the plugin enabled. The scene check covers graph round trips, choice/random port indices, Unicode escaping, malformed input and failed-save protection. They write temporary files under `/tmp` and do not alter the example dialogue.
 
 ## License
 

@@ -526,7 +526,7 @@ public partial class DialogueEditor : Control
 
 		if (fromOutput)
 		{
-			// arrastou de um output -> precisa de nodes com input
+			// Dragged from an output: offer nodes with an input
 			popupMenu.AddItem("Add Dialogue", MenuAddDialogueNode);
 			popupMenu.AddItem("Add Choices", MenuAddSwitchNode);
 			popupMenu.AddItem("Add Random", MenuAddRandomizeNode);
@@ -534,7 +534,7 @@ public partial class DialogueEditor : Control
 		}
 		else
 		{
-			// arrastou de um input -> precisa de nodes com output
+			// Dragged from an input: offer nodes with an output
 			popupMenu.AddItem("Add Dialogue", MenuAddDialogueNode);
 			popupMenu.AddItem("Add Choices", MenuAddSwitchNode);
 			popupMenu.AddItem("Add Random", MenuAddRandomizeNode);
